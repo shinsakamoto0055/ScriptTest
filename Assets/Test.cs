@@ -18,7 +18,8 @@ public class Boss{
 
     public void Magic(int magic)
     {
-        if (mp > magic) {
+//        if (mp > magic) {  //　「>」⇒「>=」にしないとmpが丁度 5だった場合に魔法を発動することができない。修正！
+        if (mp >= magic) {
             this.mp -= magic;
             Debug.Log("魔法攻撃をした。残りＭＰは" + mp + "。");
         }else{
